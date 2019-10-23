@@ -1,0 +1,121 @@
+/* HEADER STYLE */
+:root {
+    --header-bg: #242939;
+    --header-icon-bg: #282f48;
+    --header-icon-text: #6e7899;
+    --header-icon-text-hover: #b9bece;
+    --header-logo-text: #b9bece;
+    --header-input-text: #445a78;
+}
+.header-bg {
+    background: var(--header-bg);
+}
+.header-icon-bg {
+    background: var(--header-icon-bg);
+}
+.header-icon-text {
+    color: var(--header-icon-text);
+}
+.header-icon-text:hover {
+    transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    color: var(--header-icon-text-hover);
+}
+.header-logo-text {
+    color: var(--header-logo-text);
+}
+.header-input-text {
+    color: var(--header-input-text);
+}
+.header-input-text::placeholder {
+    color: var(--header-input-text);
+}
+
+/* NOTIFICATIONS */
+.notification-pink {
+    background-color: #ff61c5;
+    box-shadow: 0 0 10px #ff61c5;
+}
+.notification-blue {
+    background-color: #61b8ff;
+    box-shadow: 0 0 10px #61b8ff;
+}
+.alert {
+    top: 0;
+    right: 0;
+    margin: -3px 8px 0 0;
+    position: absolute;
+    display: block;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 3px solid var(--header-icon-bg);
+}
+
+/* SIDEBAR/OFFCANVAS - HOVER WITH DIFFERENT COLORS */
+.hover-icon-and-text a i {
+    color: rgba(140, 165, 239, .6);
+}
+.hover-icon-and-text a span {
+    color: #718096;
+}
+.hover-icon-and-text:hover a i {
+    color: #95b0ff;
+}
+.hover-icon-and-text:hover a span {
+    color: #4a5568;
+}
+
+.nav-offcanvas {
+    margin-top: 64px;
+    top: 0;
+    left: -300px;
+    width: 270px;
+    height: 100vh;
+    position: fixed;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding-top: 1.25rem; /* pt-5 */
+    padding-bottom: 6rem; /* pb-24 */
+    background: #f7fafc;
+    z-index: 2000;
+    transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.nav-offcanvas.open {
+    left: 0;
+}
+.offcanvas-overlay {
+    margin-top: 64px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1999;
+    transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.offcanvas-overlay.on {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* SCROLLBAR */
+.custom-scrollbar::-webkit-scrollbar-corner{
+    background-color: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    /* border-radius: 10px; */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #b7c7f4;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #b1c0eb;
+}
