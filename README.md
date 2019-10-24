@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Simple Interface created with HTML/CSS/JS and Tailwindcss <a href="https://codepen.io/magno-santos" target="_blank">view demo</a>.</h4>
+<h4 align="center">Simple Interface created with HTML/CSS/JS and Tailwindcss <a href="https://codepen.io/mayderson/pen/PoopMGa" target="_blank">view demo</a>.</h4>
 
 <br>
 
