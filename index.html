@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="assets/lightning.png"/>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Lightning Interface</title>
+</head>
+<body class="bg-gray-200 custom-scrollbar">
+    <!-- HEADER/NAVIGATION -->
+    <header class="z-10 fixed flex flex-wrap items-center w-full py-3 header-bg">
+        <div class="flex flex-no-wrap w-full">
+            <div id="system-info" class="w-1/5 flex justify-center items-center px-3">
+                <img class="h-10" src="assets/lightning.png" alt="Logo">
+                <span class="hidden lg:block ml-3 text-white text-center text-lg font-normal tracking-wider header-logo-text">Lightning Interface</span>
+            </div>
+            <div id="header-content" class="w-4/5 flex items-center">
+                <div class="flex justify-end lg:justify-start w-full">
+                    <span id="expand-and-shrink-menu" class="hidden lg:block cursor-pointer header-icon-bg rounded py-2 px-3 mr-2">
+                        <i class="header-icon-text fas fa-bars"></i>
+                    </span>
+                    <input type="text" class="w-1/2 hidden lg:block header-input-text font-semibold tracking-wide header-icon-bg rounded py-2 px-3 focus:outline-none" placeholder="Search...">
+                    <span id="openOffcanvasMenuMobile" class="block lg:hidden cursor-pointer header-icon-bg rounded py-2 px-3 mr-2">
+                        <i class="header-icon-text fas fa-bars"></i>
+                    </span>
+                </div>
+
+                <div class="flex flex-1 justify-end items-center">
+                    <div class="relative">
+                        <i class="cursor-pointer header-icon-text header-icon-bg rounded py-3 px-3 far fa-bell mr-3"></i>
+                        <span class="notification-pink alert"></span>
+                    </div>
+                    <div class="relative">
+                        <i class="cursor-pointer header-icon-text header-icon-bg rounded py-3 px-3 far fa-envelope mr-3"></i>
+                        <span class="notification-blue alert"></span>
+                    </div>
+                    <i class="cursor-pointer header-icon-text header-icon-bg rounded py-3 px-3 far fa-user mr-3"></i>
+                    <i class="cursor-pointer header-icon-text header-icon-bg rounded py-3 px-3 fas fa-cog mr-3"></i>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- /HEADER/NAVIGATION -->
+
+    <!-- SIDEBAR -->
+    <nav id="sidebar" class="hidden lg:block fixed w-1/5 mt-16 pt-5 pb-24 h-screen bg-gray-100 overflow-y-auto custom-scrollbar">
+        <div class="flex flex-wrap justify-center items-center my-6">
+            <img id="user-image" class="h-24 w-24 rounded-full shadow-md" src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg" alt="User">
+            <div id="user-info" class="w-full block text-center mt-6 mb-6 leading-relaxed">
+                <span class="block text-lg font-semibold uppercase text-indigo-900">Sup3r-Us3r</span>
+                <span class="block text-xs font-semibold uppercase text-indigo-800">Administrator</span>
+            </div>
+            <hr class="w-full border-b-0 border-gray-300">
+        </div>
+
+        <ul class="flex flex-wrap w-full">
+            <li class="w-full py-3 px-5 mb-1 cursor-pointer bg-transparent hover:bg-gray-200 hover-icon-and-text hover-icon-and-text">
+                <a>
+                    <i class="w-6 fas fa-home"></i>
+                    <span class="ml-1 font-semibold text-sm tracking-wide">Home</span>
+                </a>
+            </li>
+            <li class="w-full py-3 px-5 mb-1 cursor-pointer bg-transparent hover:bg-gray-200 hover-icon-and-text">
+                <a>
+                    <i class="w-6 fas fa-plus"></i>
+                    <span class="ml-1 font-semibold text-sm tracking-wide">Plus</span>
+                </a>
+            </li>
+            <li class="w-full py-3 px-5 mb-1 cursor-pointer bg-transparent hover:bg-gray-200 hover-icon-and-text">
+                <a>
+                    <i class="w-6 far fa-bell"></i>
+                    <span class="ml-1 font-semibold text-sm tracking-wide">Notification</span>
+                </a>
+            </li>
+            <li class="w-full py-3 px-5 mb-1 cursor-pointer bg-transparent hover:bg-gray-200 hover-icon-and-text">
+                <a>
+                    <i class="w-6 fas fa-database"></i>
+                    <span class="ml-1 font-semibold text-sm tracking-wide">Database</span>
+                </a>
+            </li>
+            <li class="w-full py-3 px-5 mb-1 cursor-pointer bg-transparent hover:bg-gray-200 hover-icon-and-text">
+                <a>
+                    <i class="w-6 fas fa-star"></i>
+                    <span class="ml-1 font-semibold text-sm tracking-wide">Star</span>
+                </a>
+            </li>
+            <li class="w-full py-3 px-5 mb-1 cursor-pointer bg-transparent hover:bg-gray-200 hover-icon-and-text">
+                <a>
+                    <i class="w-6 fas fa-cog"></i>
+                    <span class="ml-1 font-semibold text-sm tracking-wide">Settings</span>
+                </a>
+            </li>
+            <li class="w-full py-3 px-5 mb-1 cursor-pointer bg-transparent hover:bg-gray-200 hover-icon-and-text">
+                <a>
+                    <i class="w-6 fas fa-rss"></i>
+                    <span class="ml-1 font-semibold text-sm tracking-wide">RSS</span>
+                </a>
+            </li>
+            <li class="w-full py-3 px-5 mb-1 cursor-pointer bg-transparent hover:bg-gray-200 hover-icon-and-text">
+                <a>
+                    <i class="w-6 fas fa-share-alt"></i>
+                    <span class="ml-1 font-semibold text-sm tracking-wide">Share</span>
+                </a>
+            </li>
+            <li class="w-full py-3 px-5 mb-1 cursor-pointer bg-transparent hover:bg-gray-200 hover-icon-and-text">
+                <a>
+                    <i class="w-6 far fa-user-circle"></i>
+                    <span class="ml-1 font-semibold text-sm tracking-wide">User</span>
+                </a>
+            </li>
+            <li class="w-full py-3 px-5 mb-1 cursor-pointer bg-transparent hover:bg-gray-200 hover-icon-and-text">
+                <a>
+                    <i class="w-6 fas fa-download"></i>
+                    <span class="ml-1 font-semibold text-sm tracking-wide">Download</span>
+                </a>
+            </li>
+            <li class="w-full py-3 px-5 mb-1 cursor-pointer bg-transparent hover:bg-gray-200 hover-icon-and-text">
+                <a>
+                    <i class="w-6 far fa-edit"></i>
+                    <span class="ml-1 font-semibold text-sm tracking-wide">Edit</span>
+                </a>
+            </li>
+            <li class="w-full py-3 px-5 mb-1 cursor-pointer bg-transparent hover:bg-gray-200 hover-icon-and-text">
+                <a>
+                    <i class="w-6 fas fa-fingerprint"></i>
+                    <span class="ml-1 font-semibold text-sm tracking-wide">Fingerprint</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- /SIDEBAR -->
+
+    <!-- OFFCANVAS -->
+        <nav id="offcanvas-mobile" class="block lg:hidden nav-offcanvas">
+        </nav>
+    <!-- /OFFCANVAS -->
+
+    <!-- OFFCANVAS OVERLAY -->
+    <div id="offcanvas-overlay" class="block lg:hidden offcanvas-overlay"></div>
+    <!-- /OFFCANVAS OVERLAY -->
+
+    <!-- CONTENT -->
+    <div class="flex flex-wrap justify-end items-center w-full bg-gray-200">
+        <main id="main-content" class="flex flex-wrap justify-end items-center w-full lg:w-4/5 mt-16 p-5 bg-gray-200">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sed nesciunt, libero obcaecati nemo suscipit minima impedit magnam dicta enim quae iste explicabo, laudantium provident cum similique mollitia ducimus aliquam ut excepturi. Distinctio earum at iste vero nobis sit dolore beatae, magni possimus maxime quas ad voluptate reprehenderit dolorum doloremque voluptates tenetur repellendus. In aut vitae enim omnis numquam, illum minus repellat, tempore ipsam facere possimus pariatur. Provident adipisci natus laborum accusantium quasi molestias omnis aut? Molestiae, excepturi eos ab nobis ex distinctio totam aperiam incidunt sapiente libero hic cum alias dolores laudantium quidem placeat quis. Minus eligendi in, minima nemo doloremque explicabo iusto tenetur quia labore numquam nihil illo nulla corporis quaerat accusamus ratione veniam fugiat voluptatibus at error id. Eaque, quaerat hic odit, dolor repellat, fugit velit quae vel quas ab ipsa quam itaque possimus nesciunt id nihil sit. Obcaecati eligendi veniam velit accusantium laborum labore commodi quidem temporibus asperiores. Animi officiis blanditiis odio, vitae nam debitis perferendis ipsum autem mollitia culpa doloribus non voluptatibus minima nemo, pariatur inventore quo molestias dignissimos recusandae aliquam dolorem, hic reiciendis voluptas explicabo. Tempore ullam commodi porro nihil quam voluptas animi atque placeat earum! Pariatur provident vel nostrum cumque blanditiis quia maxime, fugiat rem delectus? Nulla consequuntur animi, alias possimus eligendi veritatis optio consectetur vel tempora mollitia et, non maxime dolorum sed amet doloribus sunt reprehenderit provident ipsa quos soluta? Atque culpa a alias voluptates? Vero nesciunt dolore eligendi rerum veritatis reprehenderit enim distinctio commodi quam sint. Suscipit veritatis, ipsa eaque dolorum dignissimos similique provident, ea ad enim commodi sapiente magnam aperiam temporibus, minus amet facere vel maiores veniam exercitationem aliquam nihil. Tenetur, expedita placeat vel excepturi ex repellendus tempora eos, optio modi deleniti exercitationem porro eum voluptates necessitatibus id quibusdam officiis veniam recusandae aperiam provident distinctio dicta. Reiciendis nobis debitis fuga possimus similique animi perspiciatis praesentium adipisci itaque asperiores, sint, earum tempore! Est dicta obcaecati eveniet recusandae perferendis accusamus nobis voluptate labore itaque. Suscipit hic at, labore est atque molestias eum aliquid magni ducimus sed ut consequuntur quia. Consectetur aperiam, illum est labore qui adipisci hic natus numquam architecto cupiditate amet repellat delectus exercitationem temporibus odio minus ipsum quibusdam cumque corporis, repellendus quis distinctio veniam? Voluptate provident ad, asperiores magnam quas hic adipisci esse porro quidem atque, distinctio corporis debitis. Adipisci recusandae, quas unde illo error eaque perspiciatis obcaecati saepe corporis aperiam necessitatibus officia alias tempore ex pariatur eligendi doloribus nobis inventore! Maiores praesentium voluptates, reprehenderit laborum expedita molestiae quam nam vel sed, maxime, labore quidem modi quibusdam nihil eos qui nulla beatae molestias aspernatur. Eligendi perferendis impedit nostrum ducimus? Voluptatibus numquam necessitatibus earum! Sequi, modi. Iste recusandae cupiditate, nesciunt quos molestias laudantium a beatae ab facilis vel voluptate soluta voluptas quo nisi tempora veniam fuga quam deleniti veritatis amet quae! Culpa, veritatis! Natus excepturi quaerat deleniti nemo, omnis reprehenderit nesciunt. Laborum consectetur porro magnam dolorum, aliquam, culpa sunt quas commodi, at numquam voluptate? Sed reprehenderit a culpa, nisi labore, soluta nihil natus tenetur eligendi eaque nemo inventore facilis quia quo facere velit quis libero odio ex ratione ipsa exercitationem officia! Odio officia praesentium nam architecto molestias? Explicabo, ipsam aut! Deserunt, unde. Reiciendis sunt maxime cupiditate, unde vel, accusamus tempore distinctio officiis numquam veritatis vitae. Sit ab, expedita numquam voluptas et ducimus fuga harum repellat aliquam laudantium nisi nihil eaque id. Ut ullam, distinctio itaque eum neque corporis nesciunt ex perspiciatis pariatur architecto explicabo debitis eius quo, voluptas dolorum recusandae exercitationem sit numquam aperiam at veniam! Molestiae cumque illo, quibusdam nobis magnam impedit dolorum voluptatem enim, dolorem earum molestias perspiciatis eum? Aperiam dolore quam non minima qui inventore eveniet atque, neque voluptates nobis eum, quo maiores quod dolores? Hic sunt rerum provident dolores. Soluta facilis sequi cupiditate excepturi modi sit culpa, nesciunt iure ex, error reiciendis repellendus nisi voluptatem vero ullam tempora praesentium unde consequuntur cum quae nam voluptate placeat. Quasi sit enim ipsa nobis. Pariatur aut dicta inventore ipsam unde, hic iure eum quas molestias mollitia ipsum adipisci sapiente expedita voluptate? Cumque libero, mollitia, corporis omnis tenetur illo, ipsa reiciendis eius autem minima et nesciunt quos nulla? Sint officiis saepe repellat. Sint tempora labore laborum necessitatibus magnam, eligendi saepe. Aperiam perferendis cupiditate facilis architecto reiciendis officiis fugit tempora aspernatur quidem et corporis nam quo aut nemo consectetur, eius aliquid possimus ab assumenda soluta, nostrum atque? Facilis tempore veritatis sapiente aut voluptas in pariatur aspernatur accusamus, corrupti expedita praesentium suscipit, totam consequatur corporis molestiae vitae aliquam illo iste voluptate quaerat dolor. Itaque repellat corrupti a quibusdam dolore? Hic doloremque qui assumenda voluptas voluptatem non enim voluptates sapiente eveniet possimus illum, at voluptate incidunt! Quasi dicta totam nisi illo cupiditate sit quia ad commodi molestias architecto. Neque tempore adipisci voluptas repellat totam cumque quos sequi recusandae eligendi architecto, libero nisi eveniet molestias rem iste laboriosam magnam at. Hic consequatur voluptas repellendus accusantium nesciunt. Rem, laudantium sapiente est nulla omnis doloremque nemo voluptate itaque debitis magnam fugit suscipit perspiciatis alias dicta explicabo doloribus ex sunt pariatur quod quasi fugiat? Pariatur unde sequi at totam quod earum quis deserunt quas atque adipisci quam odio quo magnam dignissimos vel qui consequatur, magni dolor molestias placeat necessitatibus. Dolore tenetur iusto at cupiditate inventore, nisi autem odio molestias aspernatur eius sapiente odit necessitatibus, repudiandae temporibus quisquam soluta cumque aut deserunt rerum nostrum asperiores velit dicta. Dolorem eligendi ut quam omnis aut! Molestias incidunt laboriosam dolorum ipsa hic accusamus id adipisci voluptatem repudiandae a. Modi fugiat dolores aperiam similique aliquid voluptate excepturi nostrum et. Aspernatur, blanditiis dignissimos, impedit consectetur labore libero dolorem at ad ullam vel distinctio illo expedita eum similique debitis, id asperiores temporibus. Repellat tempora odio voluptas porro quibusdam corporis ea, modi vel molestias eius dicta consectetur labore exercitationem ex error quasi, quas blanditiis rerum hic sapiente similique aut eaque, dolores molestiae. Vero voluptate praesentium dolores consectetur rem laborum blanditiis ex impedit eos possimus, officia ea iusto cumque iste. Culpa nihil, quam natus aspernatur sed rem! Rem accusamus architecto at laborum? Optio laborum magni adipisci, nostrum dolore quam repellendus ut dolores sequi consequuntur minus quasi eveniet?
+        </main>
+    </div>
+    <!-- /CONTENT -->
+
+    <!-- LOAD SCRIPT -->
+    <script src="js/index.js"></script>
+    <!-- /LOAD SCRIPT -->
+</body>
+</html>
